@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Auto Connect Message Options</title>
+  <style>
+  html {
+    width: 600px;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    padding: 20px;
+    background-color: #f2f2f2;
+    color: #212529;
+    line-height: 1.5;
+    width: 600px;
+    
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  /* Textarea styles */
+  textarea {
+    width: 82%;
+    height: 200px;
+    padding: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    resize: vertical;
+    margin-bottom: 24px;
+  }
+
+  textarea:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075), 0 0 0 3px rgba(3, 102, 214, 0.3);
+  }
+
+  /* Button styles */
+  button {
+    display: inline-block;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 6px;
+    box-shadow: none;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin-right: 10px;
+    margin-bottom: 24px;
+  }
+
+  button:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+
+  button:active {
+    background-color: #0062cc;
+    border-color: #005cbf;
+  }
+
+  /* Container for better alignment */
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Placeholder styles */
+  .placeholder {
+    font-weight: 600;
+    color: #007bff;
+  }
+
+  /* Character count styles */
+  #charCount {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  /* Tips section styles */
+  .tips {
+font-size: 14px;
+margin-top: 32px;
+border-top: 1px solid #ced4da;
+padding-top: 16px;
+}
+
+.tips h2 {
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 16px;
+}
+
+.tips ul {
+margin-left: 16px;
+}
+
+.tips li {
+margin-bottom: 8px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 500px) {
+.container {
+width: 100%;
+padding: 20px;
+}
+}
+</style>
+
+</head>
+<body class="container">
+  <h1>LinkedInx Auto Message</h1>
+  <p>Customize your default message below:</p>
+  <textarea id="messageTemplate" rows="4"></textarea>
+  <p id="charCount">0 / 300</p>
+  <button id="saveButton">Save</button>
+  <p id="status"></p>
+  <p>Available placeholders: <span class="placeholder">{name}</span>, <span class="placeholder">{company}</span>, <span class="placeholder">{school}</span>, <span class="placeholder">{industry}</span></p>
+  <div class="tips">
+    <h2>Tips:</h2>
+    <ul>
+      <li>Personalize your message by using the available placeholders.</li>
+      <li>Avoid sending spam messages to multiple recipients at once.</li>
+      <li>Keep your message concise and to the point.</li>
+      <li>Proofread your message for grammar and spelling errors.</li>
+      <li>Do not include links or attachments in your message unless necessary.</li>
+      <li>Be respectful and professional in your message.</li>
+    </ul>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
